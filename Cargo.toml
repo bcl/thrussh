@@ -1,0 +1,54 @@
+[package]
+name = "thrussh"
+description = "A client and server SSH library. Memory-safe, doesn't do its own crypto (based on *ring*)."
+keywords = ["ssh"]
+version = "0.8.2"
+authors = ["Pierre-Étienne Meunier <pe@pijul.org>"]
+repository = "https://pijul.org/thrussh"
+homepage = "https://pijul.org/thrussh"
+documentation = "https://docs.rs/thrussh"
+license = "Apache-2.0"
+include = [
+        "Cargo.toml",
+        "src/auth.rs",
+        "src/encoding.rs",
+        "src/kex.rs",
+        "src/key.rs",
+        "src/lib.rs",
+        "src/msg.rs",
+        "src/negociation.rs",
+        "src/pty.rs",
+        "src/session.rs",
+        "src/sshbuffer.rs",
+        "src/bin/client.rs",
+        "src/bin/server.rs",
+        "src/cipher/chacha20poly1305.rs",
+        "src/cipher/clear.rs",
+        "src/cipher/mod.rs",
+        "src/client/mod.rs",
+        "src/client/encrypted.rs",
+        "src/server/mod.rs",
+        "src/server/encrypted.rs"
+        ]
+
+[dependencies]
+arrayref = "0.3.2"
+byteorder = "0.5"
+bitflags = "0.7"
+libc = "0.2"
+log = "0.3"
+ring = "0.6.1"
+rustc-serialize = "0.3"
+time = "0.1"
+untrusted = "0.3.1"
+mio = "0.6"
+regex = "0.1"
+cryptovec = "0.3"
+
+tokio-core = "0.1"
+futures = "0.1"
+
+env_logger = "0.3"
+
+[dev-dependencies]
+tempdir="0.3"

@@ -1,2 +1,3 @@
 _darcs
-Cargo.toml
+Cargo.lock
+target
