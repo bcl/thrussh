@@ -291,12 +291,12 @@ impl Session {
                                 handler.subsystem_request(channel_num, name, self)
                             ))
                         }
-                        b"window_change" => {
+                        b"window-change" => {
                             let col_width = try!(r.read_u32());
                             let row_height = try!(r.read_u32());
                             let pix_width = try!(r.read_u32());
                             let pix_height = try!(r.read_u32());
-                            debug!("handler.window_change {:?}", channel_num);
+                            debug!("handler.window_change_request {:?}", channel_num);
                             Ok(Authenticated::future_unit(handler.window_change_request(channel_num,
                                                                                        col_width,
                                                                                        row_height,
